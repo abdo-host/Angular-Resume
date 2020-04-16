@@ -1,5 +1,8 @@
 # Angular Personal Resume Template
 
+![alt text](https://www.abdo-host.com/screenshot.png)
+
+
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 9.0.1.
 
 ## Development server
