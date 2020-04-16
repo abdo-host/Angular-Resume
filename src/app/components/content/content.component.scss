@@ -1,0 +1,219 @@
+@import "../../../assets/scss/mixins";
+
+.main-wrapper {
+  background: #fff;
+  padding: 60px;
+  padding-left: 360px;
+
+  .section-title {
+    text-transform: uppercase;
+    font-size: 20px;
+    font-weight: 500;
+    color: darken(#ef4b4b, 15%);
+    position: relative;
+    margin-top: 0;
+    margin-bottom: 20px;
+
+    .icon-holder {
+      width: 35px;
+      height: 35px;
+      line-height: 35px;
+      margin-right: 10px;
+      display: inline-block;
+      color: #fff;
+      @include border-radius(3px);
+      background: darken(#ef4b4b, 15%);
+      text-align: center;
+      font-size: 20px;
+      position: relative;
+
+      .svg-inline--fa {
+        font-size: 14px;
+        margin-top: 10px;
+      }
+    }
+
+  }
+
+  .section {
+    margin-bottom: 60px;
+
+    &.summary-section {
+      p.color-blod {
+        color: #333;
+        font-weight: 500;
+      }
+    }
+  }
+
+  .experiences-section {
+    .item {
+      margin-bottom: 30px;
+    }
+  }
+
+  .upper-row {
+    position: relative;
+    overflow: hidden;
+    margin-bottom: 2px;
+  }
+
+  .job-title {
+    color: #3F4650;
+    font-size: 16px;
+    margin-top: 0;
+    margin-bottom: 0;
+    font-weight: 500;
+  }
+
+  .time {
+    position: absolute;
+    right: 0;
+    top: 0;
+    color: #97AAC3;
+  }
+
+  .company {
+    margin-bottom: 10px;
+    color: #97AAC3;
+  }
+
+  .project-title {
+    font-size: 16px;
+    font-weight: 400;
+    margin-top: 0;
+    margin-bottom: 5px;
+  }
+
+  .projects-section {
+    .intro {
+      margin-bottom: 30px;
+    }
+
+    .item {
+      margin-bottom: 15px;
+    }
+  }
+
+  .portfolio-content {
+    margin: 0px;
+
+    .portfolio-item {
+      overflow: hidden;
+      position: relative;
+      height: 300px;
+      border-radius: 5px;
+      margin-bottom: 30px;
+
+      a {
+        position: absolute;
+        z-index: 10;
+        left: 0px;
+        top: 0px;
+        right: 0px;
+        bottom: 0px;
+      }
+
+      img {
+        width: 100%;
+        height: 300px;
+        border-radius: 5px;
+        transition: all 0.4s ease-in-out;
+      }
+
+      .details {
+        background: rgba(0, 0, 0, 0) linear-gradient(to bottom, rgba(0, 0, 0, 0) 0px, rgba(0, 0, 0, 0.9) 100%) repeat scroll 0 0;
+        width: 100%;
+        height: auto;
+        overflow: hidden;
+        position: absolute;
+        z-index: 5;
+        bottom: 0px;
+        left: 0px;
+        padding: 40px 15px 10px 15px;
+        transition: all 0.2s ease-in-out;
+
+        h4 {
+          font-size: 16px;
+          color: #fff;
+          margin: 0px;
+          width: 70%;
+        }
+
+        .stats {
+          position: absolute;
+          right: 15px;
+          bottom: -5px;
+          transition: all 0.2s ease-in-out;
+
+          li {
+            display: inline-block;
+            margin-left: 15px;
+            color: #fff;
+          }
+        }
+
+        .tags {
+          position: absolute;
+          left: 15px;
+          bottom: -60px;
+          transition: all 0.2s ease-in-out;
+
+          li {
+            background: #ef4b4b;
+            display: inline-block;
+            margin-right: 15px;
+            color: #fff;
+            font-size: 13px;
+            padding: 2px 6px;
+            border-radius: 4px;
+          }
+        }
+      }
+
+      &:hover {
+        img {
+          transform: scale(1.1, 1.1);
+        }
+
+        .details {
+          padding-bottom: 50px;
+
+          .stats {
+            bottom: 40px;
+          }
+
+          .tags {
+            bottom: 0px;
+          }
+        }
+      }
+    }
+  }
+
+}
+
+
+.skillset {
+  .item {
+    margin-bottom: 15px;
+    overflow: hidden;
+  }
+
+  .level-title {
+    font-size: 14px;
+    margin-top: 0;
+    margin-bottom: 12px;
+  }
+
+
+  .level-bar {
+    height: 12px;
+    background: #f5f5f5;
+    @include border-radius(2px);
+  }
+
+  .theme-progress-bar {
+    background: lighten(#ef4b4b, 10%);
+  }
+}

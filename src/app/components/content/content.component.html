@@ -1,0 +1,79 @@
+<div class="main-wrapper">
+
+  <section class="section summary-section">
+    <h2 class="section-title"><span class="icon-holder"><i class="fas fa-user"></i></span>Career Profile</h2>
+    <div class="summary">
+      <p class="color-blod">
+        I'M Abdo a web designer and front-end developer with over six years of professional experience in ui design and
+        development, i currently living in cairo EG.
+      </p>
+      <p>
+        I have a bachelor of information systems in mansoura, I study human computer interface and the psychology of
+        human computer interaction.
+      </p>
+      <p>
+        My best qualities include being a creative thinker, a leader, a cheerleader, a team player, a multi-tasker, a
+        hard worker and someone who understands that behind every great design is an important business objective. I’m
+        always seeking new technical skills and new solutions.
+      </p>
+      <p>
+        I have startup development 'Tatwerat.com' and i work well with a professional team is always trying to develop
+        self and offering the finest services .
+      </p>
+    </div><!--//summary-->
+  </section><!--//section-->
+
+  <section class="section experiences-section">
+    <h2 class="section-title"><span class="icon-holder"><i class="fas fa-briefcase"></i></span>Experiences</h2>
+
+    <div class="item" *ngFor="let experience of experiences | orderBy:'desc': 'fromDate.year'">
+      <div class="meta">
+        <div class="upper-row">
+          <h3 class="job-title">{{experience.title}}</h3>
+          <div class="time"> {{experience.fromDate.month}} {{experience.fromDate.year}} - {{experience.toDate}}</div>
+        </div><!--//upper-row-->
+        <div class="company">{{experience.company}}</div>
+      </div><!--//meta-->
+      <div class="details">
+        <p>{{experience.description}}</p>
+      </div><!--//details-->
+    </div><!--//item-->
+
+  </section><!--//section-->
+
+  <section class="section portfolio-section">
+    <h2 class="section-title">
+      <span class="icon-holder"><i class="fas fa-th-large"></i></span>
+      Portfolio
+    </h2>
+    <div class="portfolio-content">
+      <div class="row">
+        <div class="col-xl-6" *ngFor="let item of portfolio | paginate: { itemsPerPage: 4, currentPage: p }">
+          <div class="portfolio-item">
+            <a href="{{item.url}}" target="_blank"></a>
+            <img src="{{item.covers['404']}}" alt="{{item.name}}">
+            <div class="details">
+              <h4>{{item.name}}</h4>
+              <div class="stats">
+                <ul class="list-unstyled">
+                  <li><i class="far fa-eye"></i> {{item.stats.views}}</li>
+                  <li><i class="far fa-thumbs-up"></i> {{item.stats.appreciations}}</li>
+                </ul>
+              </div>
+              <div class="tags" *ngIf="item.fields.length">
+                <ul class="list-unstyled">
+                  <li *ngFor="let field of item.fields">{{field}}</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="text-center mt-3">
+        <pagination-controls (pageChange)="p = $event"></pagination-controls>
+      </div>
+    </div>
+
+  </section><!--//section-->
+
+</div><!--//main-body-->

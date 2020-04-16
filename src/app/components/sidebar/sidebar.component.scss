@@ -1,0 +1,142 @@
+@import "../../../assets/scss/mixins";
+
+.sidebar-wrapper {
+  background: #ef4b4b;
+  position: absolute;
+  left: 0px;
+  top: 0px;
+  width: 300px;
+  height: 100%;
+  min-height: 800px;
+  color: #fff;
+
+  a {
+    color: #fff;
+  }
+
+  .profile-container {
+    padding: 30px;
+    //background: darken(#ef4b4b, 10%);
+    background: rgba(0, 0, 0, 0.25);
+    text-align: center;
+    color: #fff;
+  }
+
+  .name {
+    font-size: 32px;
+    font-weight: 900;
+    margin-top: 0;
+    margin-bottom: 10px;
+  }
+
+  .tagline {
+    color: rgba(256, 256, 256, 0.6);
+    font-size: 16px;
+    font-weight: 400;
+    margin-top: 0;
+    margin-bottom: 0;
+  }
+
+  .profile {
+    margin: 0px auto 15px auto;
+    width: 168px;
+    height: 168px;
+    display: block;
+    @include border-radius(100%);
+    box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.35);
+  }
+
+  .contact-list {
+    .fab, .fas {
+      margin-right: 5px;
+      font-size: 18px;
+      vertical-align: middle;
+    }
+
+    li {
+      margin-bottom: 15px;
+
+      &:last-child {
+        margin-bottom: 0;
+      }
+    }
+
+    .email {
+      .svg-inline--fa {
+        font-size: 14px;
+      }
+    }
+  }
+
+  .container-block {
+    padding: 30px;
+  }
+
+  .container-block-title {
+    text-transform: uppercase;
+    font-size: 16px;
+    font-weight: 700;
+    margin-top: 0;
+    margin-bottom: 15px;
+  }
+
+  .degree {
+    font-size: 14px;
+    margin-top: 0;
+    margin-bottom: 5px;
+  }
+
+  .education-container {
+    .item {
+      margin-bottom: 15px;
+
+      &:last-child {
+        margin-bottom: 0;
+      }
+    }
+
+    .meta {
+      color: rgba(256, 256, 256, 0.6);
+      font-weight: 500;
+      margin-bottom: 0px;
+      margin-top: 0;
+      font-size: 14px;
+    }
+
+    .time {
+      color: rgba(256, 256, 256, 0.6);
+      font-weight: 500;
+      margin-bottom: 0px;
+    }
+  }
+
+  .languages-container {
+    .lang-desc {
+      color: rgba(256, 256, 256, 0.6);
+    }
+  }
+
+  .languages-list {
+    margin-bottom: 0;
+
+    li {
+      margin-bottom: 10px;
+
+      &:last-child {
+        margin-bottom: 0;
+      }
+    }
+  }
+
+  .interests-list {
+    margin-bottom: 0;
+
+    li {
+      margin-bottom: 10px;
+
+      &:last-child {
+        margin-bottom: 0;
+      }
+    }
+  }
+}
